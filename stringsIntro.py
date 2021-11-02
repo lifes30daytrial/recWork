@@ -51,10 +51,26 @@ print("Concentrating strings with the plus sign operator:")
 str1 = "Beef"
 str2 = "Gravy"
 str1and2 = str1 + ' ' + str2
+print(str1and2, "is amazing")
+print('')
+
+print("-- Lines 57-61 --")
+print("Concentrating strings with .format():")
+str1and2 = "{} {} is amazing".format(str1, str2)
 print(str1and2)
 print('')
 
-print("-- Lines 57-60 --")
-print("Concentrating strings with .format():")
-str1and2 = "{} {}".format(str1, str2)
-print(str1and2)
+print("-- Lines 63-66 --")
+print("Using f-strings, which I may or may not have already been doing:")
+print(f"{str1} {str2.upper()} is amazing")
+print('')
+
+print("-- Lines 68-71 --")
+print("List out all the attributes and methods of a variable")
+print(dir(str1))
+print('')
+
+print("-- Lines 73-76 --")
+print("Prints out the help/manual for strings")
+print(help(str))
+print('')

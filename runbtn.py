@@ -12,4 +12,4 @@ try:
   modules.append(__import__(imports[userInput]))
   print(f"Successfully imported {imports[userInput]}")
 except ImportError:
-  print(f"\n\n ========== End of Runtime =========== \n Post Scriptum: Computer go wonk, {imports[userInput]} may have problems during runtime.")
+  print(f"\n\n ========== End of Runtime =========== \n Post Scriptum: Python's probably grumbling about something, but {imports[userInput]} should work, unless it doesn't.")

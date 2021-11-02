@@ -6,7 +6,6 @@ authors = ["JonathanXu5 <<>>"]
 
 [tool.poetry.dependencies]
 python = "^3.8"
-x-py = "^0.0.1"
 
 [tool.poetry.dev-dependencies]
 
