@@ -1,19 +1,24 @@
 import numpy as np
-sdkTable = np.zeros((9, 9), dtype=int)
+#sdkTable = np.zeros((9, 9), dtype=int)
+sdkTable = np.array([[0, 0, 0, 2, 6, 0, 7, 0, 1],
+                    [6, 8 ,0, 0, 7, 0, 0, 9, 0],
+                    [1, 9, 0, 0, 0, 4, 5, 0, 0],
+                    [8, 2, 0, 1, 0, 0, 0, 4, 0],
+                    [0, 0, 4, 6, 0, 2, 9, 0, 0],
+                    [0, 5, 0, 0, 0, 3, 0, 2, 8],
+                    [0, 0, 9, 3, 0, 0, 0, 7, 4],
+                    [0, 4, 0, 0, 5, 0, 0, 3, 6],
+                    [7, 0, 3, 0, 1, 8, 0, 0, 0]])
 numberTable = [0, 1, 2, 3, 4, 5, 6, 7, 8, 9]
 solving = True
 rowMissing = []
 columnMissing = []
 squareMissing = []
-sdkTable[0, 0] = 1
-sdkTable[1, 0] = 2
-sdkTable[2, 0] = 3
-sdkTable[0, 8] = 4
 
 
 def diff(l1, l2):
-    difftable = [i for i in l1 + l2 if i not in l1 or i not in l2]
-    return difftable
+    diffTable = [i for i in l1 + l2 if i not in l1 or i not in l2]
+    return diffTable
 
 
 """
@@ -52,3 +57,5 @@ for squareX in range(0, 3):
 print(rowMissing)
 print(columnMissing)
 print(squareMissing)
+print(rowMissing[0], columnMissing[1], squareMissing[0])
+print(diff(columnMissing[1], diff(rowMissing[0], numberTable)))
